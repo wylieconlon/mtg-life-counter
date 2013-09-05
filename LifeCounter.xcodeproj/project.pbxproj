@@ -13,7 +13,6 @@
 		7DEE8FF717D7E575003F5331 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE8FF517D7E575003F5331 /* InfoPlist.strings */; };
 		7DEE8FF917D7E575003F5331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE8FF817D7E575003F5331 /* main.m */; };
 		7DEE8FFD17D7E576003F5331 /* LCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE8FFC17D7E576003F5331 /* LCAppDelegate.m */; };
-		7DEE900017D7E576003F5331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE8FFE17D7E576003F5331 /* Main.storyboard */; };
 		7DEE900317D7E576003F5331 /* LCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE900217D7E576003F5331 /* LCViewController.m */; };
 		7DEE900517D7E577003F5331 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE900417D7E577003F5331 /* Images.xcassets */; };
 		7DEE900C17D7E577003F5331 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEE900B17D7E577003F5331 /* XCTest.framework */; };
@@ -21,6 +20,8 @@
 		7DEE900E17D7E577003F5331 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEE8FF017D7E574003F5331 /* UIKit.framework */; };
 		7DEE901617D7E577003F5331 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE901417D7E577003F5331 /* InfoPlist.strings */; };
 		7DEE901817D7E577003F5331 /* LifeCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE901717D7E577003F5331 /* LifeCounterTests.m */; };
+		7DEE902A17D8DD37003F5331 /* LCWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE902817D8DD37003F5331 /* LCWidgetViewController.m */; };
+		7DEE902B17D8DD37003F5331 /* LCWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE902917D8DD37003F5331 /* LCWidgetView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		7DEE8FFA17D7E575003F5331 /* LifeCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeCounter-Prefix.pch"; sourceTree = "<group>"; };
 		7DEE8FFB17D7E576003F5331 /* LCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCAppDelegate.h; sourceTree = "<group>"; };
 		7DEE8FFC17D7E576003F5331 /* LCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCAppDelegate.m; sourceTree = "<group>"; };
-		7DEE8FFF17D7E576003F5331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DEE900117D7E576003F5331 /* LCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCViewController.h; sourceTree = "<group>"; };
 		7DEE900217D7E576003F5331 /* LCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCViewController.m; sourceTree = "<group>"; };
 		7DEE900417D7E577003F5331 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,9 @@
 		7DEE901317D7E577003F5331 /* LifeCounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifeCounterTests-Info.plist"; sourceTree = "<group>"; };
 		7DEE901517D7E577003F5331 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7DEE901717D7E577003F5331 /* LifeCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCounterTests.m; sourceTree = "<group>"; };
+		7DEE902717D8DD37003F5331 /* LCWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCWidgetViewController.h; sourceTree = "<group>"; };
+		7DEE902817D8DD37003F5331 /* LCWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCWidgetViewController.m; sourceTree = "<group>"; };
+		7DEE902917D8DD37003F5331 /* LCWidgetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCWidgetView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +115,9 @@
 		7DEE8FF217D7E574003F5331 /* LifeCounter */ = {
 			isa = PBXGroup;
 			children = (
+				7DEE902317D8DCE3003F5331 /* Counter widget */,
 				7DEE8FFB17D7E576003F5331 /* LCAppDelegate.h */,
 				7DEE8FFC17D7E576003F5331 /* LCAppDelegate.m */,
-				7DEE8FFE17D7E576003F5331 /* Main.storyboard */,
 				7DEE900117D7E576003F5331 /* LCViewController.h */,
 				7DEE900217D7E576003F5331 /* LCViewController.m */,
 				7DEE900417D7E577003F5331 /* Images.xcassets */,
@@ -150,6 +153,16 @@
 				7DEE901417D7E577003F5331 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DEE902317D8DCE3003F5331 /* Counter widget */ = {
+			isa = PBXGroup;
+			children = (
+				7DEE902717D8DD37003F5331 /* LCWidgetViewController.h */,
+				7DEE902817D8DD37003F5331 /* LCWidgetViewController.m */,
+				7DEE902917D8DD37003F5331 /* LCWidgetView.xib */,
+			);
+			name = "Counter widget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEE900517D7E577003F5331 /* Images.xcassets in Resources */,
+				7DEE902B17D8DD37003F5331 /* LCWidgetView.xib in Resources */,
 				7DEE8FF717D7E575003F5331 /* InfoPlist.strings in Resources */,
-				7DEE900017D7E576003F5331 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DEE8FF917D7E575003F5331 /* main.m in Sources */,
+				7DEE902A17D8DD37003F5331 /* LCWidgetViewController.m in Sources */,
 				7DEE8FFD17D7E576003F5331 /* LCAppDelegate.m in Sources */,
 				7DEE900317D7E576003F5331 /* LCViewController.m in Sources */,
 			);
@@ -281,14 +295,6 @@
 				7DEE8FF617D7E575003F5331 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7DEE8FFE17D7E576003F5331 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DEE8FFF17D7E576003F5331 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		7DEE901417D7E577003F5331 /* InfoPlist.strings */ = {
