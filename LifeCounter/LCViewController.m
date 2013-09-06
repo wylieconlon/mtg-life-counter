@@ -9,6 +9,7 @@
 #import "LCViewController.h"
 #import "LCWidgetViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#include <stdlib.h>
 
 @interface LCViewController ()
 
@@ -34,11 +35,28 @@
                       initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                       target:self
                         action:@selector(refresh)]];
+
+    // separator
+    [items addObject:[[UIBarButtonItem alloc]
+                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                      target:nil
+                      action:nil]];
+
+    [items addObject:[[UIBarButtonItem alloc]
+                      initWithTitle:@"Roll for first"
+                      style:UIBarButtonItemStylePlain
+                      target:self
+                      action:@selector(rollDice)]];
+
     [toolbar setItems:items animated:NO];
+    [toolbar setTranslucent:NO];
+    [toolbar setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:toolbar];
     
     [self.view addSubview:widget1.view];
     [self.view addSubview:widget2.view];
+    
+    [self.view setBackgroundColor:[UIColor colorWithWhite:0.97f alpha:1.0f]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +69,7 @@
 {
     LCWidgetViewController *widget = [[LCWidgetViewController alloc] initWithNibName:@"LCWidgetView" bundle:nil];
     
-    widget.view.frame = CGRectMake(0, 220 * index + 20, 320, 200);
+    widget.view.frame = CGRectMake(0, 216 * index + 20, 320, 200);
     return widget;
 }
 
@@ -59,6 +77,28 @@
 {
     [widget1 refresh];
     [widget2 refresh];
+}
+
+- (void)rollDice
+{
+    int player1roll = arc4random_uniform(6) + arc4random_uniform(6) + 2;
+    int player2roll = arc4random_uniform(6) + arc4random_uniform(6) + 2;
+    
+    NSString *title;
+    if (player1roll > player2roll) {
+        title = [NSString stringWithFormat:@"Player 1 goes first. %d beats %d", player1roll, player2roll];
+    } else if (player1roll < player2roll) {
+        title = [NSString stringWithFormat:@"Player 2 goes first. %d loses to %d", player1roll, player2roll];
+    } else {
+        title = [NSString stringWithFormat:@"Players tie %d to %d. Roll again.", player1roll, player2roll];
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Results"
+                                                    message:title
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

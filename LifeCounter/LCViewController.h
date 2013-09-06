@@ -15,6 +15,7 @@
 @property (nonatomic, retain) LCWidgetViewController *widget2;
 
 - (void)refresh;
+- (void)rollDice;
 
 @end
 
