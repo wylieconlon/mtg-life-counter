@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7DEE8FE917D7E574003F5331 /* LifeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DEE8FE917D7E574003F5331 /* 20/20 counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20/20 counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEE8FEC17D7E574003F5331 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DEE8FEE17D7E574003F5331 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7DEE8FF017D7E574003F5331 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -95,7 +95,7 @@
 		7DEE8FEA17D7E574003F5331 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DEE8FE917D7E574003F5331 /* LifeCounter.app */,
+				7DEE8FE917D7E574003F5331 /* 20/20 counter.app */,
 				7DEE900A17D7E577003F5331 /* LifeCounterTests.xctest */,
 			);
 			name = Products;
@@ -182,7 +182,7 @@
 			);
 			name = LifeCounter;
 			productName = LifeCounter;
-			productReference = 7DEE8FE917D7E574003F5331 /* LifeCounter.app */;
+			productReference = 7DEE8FE917D7E574003F5331 /* 20/20 counter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7DEE900917D7E577003F5331 /* LifeCounterTests */ = {
@@ -213,12 +213,15 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Wylie Conlon";
 				TargetAttributes = {
+					7DEE8FE817D7E574003F5331 = {
+						DevelopmentTeam = 9273ANY8L2;
+					};
 					7DEE900917D7E577003F5331 = {
 						TestTargetID = 7DEE8FE817D7E574003F5331;
 					};
 				};
 			};
-			buildConfigurationList = 7DEE8FE417D7E574003F5331 /* Build configuration list for PBXProject "LifeCounter" */;
+			buildConfigurationList = 7DEE8FE417D7E574003F5331 /* Build configuration list for PBXProject "20 life" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -381,10 +384,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LifeCounter/LifeCounter-Prefix.pch";
 				INFOPLIST_FILE = "LifeCounter/LifeCounter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "20/20 counter";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,10 +398,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LifeCounter/LifeCounter-Prefix.pch";
 				INFOPLIST_FILE = "LifeCounter/LifeCounter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "20/20 counter";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -445,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DEE8FE417D7E574003F5331 /* Build configuration list for PBXProject "LifeCounter" */ = {
+		7DEE8FE417D7E574003F5331 /* Build configuration list for PBXProject "20 life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DEE901917D7E577003F5331 /* Debug */,
@@ -461,6 +466,7 @@
 				7DEE901D17D7E577003F5331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DEE901E17D7E577003F5331 /* Build configuration list for PBXNativeTarget "LifeCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +475,7 @@
 				7DEE902017D7E577003F5331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
